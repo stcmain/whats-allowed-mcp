@@ -1,0 +1,26 @@
+{
+  "manifest_version": "0.2",
+  "name": "whats-allowed-mcp",
+  "display_name": "What's Allowed",
+  "version": "0.1.0",
+  "description": "What your coding agent can do without asking you.",
+  "long_description": "Reads every settings file that contributes permission rules — managed policy, project, local, user — and reports the merged picture: which file each rule came from, which defaultMode wins, what proceeds unattended, and which rules the client accepts and then ignores (path rules on Write/Glob, param rules on primary content fields, unanchored allow globs, /path rules in user settings that anchor at the config directory, allow rules a deny rule reaches first). Read-only by construction: no child processes, no network, no writes. Values of env entries are never read, only their names.",
+  "author": {
+    "name": "Zachary Pampu",
+    "email": "info@shifttheculture.media",
+    "url": "https://shifttheculture.media"
+  },
+  "homepage": "https://github.com/stcmain/whats-allowed-mcp",
+  "documentation": "https://github.com/stcmain/whats-allowed-mcp#readme",
+  "support": "https://github.com/stcmain/whats-allowed-mcp/issues",
+  "license": "MIT",
+  "keywords": ["mcp", "claude-code", "permissions", "settings", "security", "audit", "guardrails"],
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "npx",
+      "args": ["-y", "whats-allowed-mcp"]
+    }
+  }
+}
