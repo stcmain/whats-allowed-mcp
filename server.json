@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.stcmain/whats-allowed-mcp",
-  "description": "What your agent can do without asking: merged permission rules, which settings file wins, and the rules your client accepts and ignores.",
+  "description": "Merged agent permission rules: which settings file wins, and which rules your client ignores.",
   "repository": {
     "url": "https://github.com/stcmain/whats-allowed-mcp",
     "source": "github"
