@@ -20,8 +20,11 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import { collect, type Settings, type Source, type Rule } from "./sources.js";
 import { lint, type Finding, type FindingKind } from "./lint.js";
+import { createRequire } from "node:module";
 
-const VERSION = "0.1.0";
+// Read from package.json so the version reported to clients can never drift
+// from the published version. `npm version` only edits package.json.
+const VERSION: string = createRequire(import.meta.url)("../package.json").version;
 
 const text = (s: string) => ({ content: [{ type: "text" as const, text: s }] });
 
