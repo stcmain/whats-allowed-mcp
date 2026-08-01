@@ -1,6 +1,6 @@
 {
   "name": "whats-allowed-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "mcpName": "io.github.stcmain/whats-allowed-mcp",
   "description": "MCP server that shows what your coding agent can do without asking you: every settings file that contributes permission rules, which one wins, what runs unattended, and the rules Claude Code accepts and then ignores.",
   "type": "module",
