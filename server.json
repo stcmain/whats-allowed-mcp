@@ -1,12 +1,23 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.stcmain/whats-allowed-mcp",
+  "title": "What's Allowed",
   "description": "Merged agent permission rules: which settings file wins, and which rules your client ignores.",
+  "websiteUrl": "https://shifttheculture.media/agent-tools",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/stcmain/whats-allowed-mcp/main/logo.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "400x400"
+      ]
+    }
+  ],
   "repository": {
     "url": "https://github.com/stcmain/whats-allowed-mcp",
     "source": "github"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packages": [
     {
       "registryType": "npm",
