@@ -50,7 +50,7 @@ Adding a fourth tool made the other three READMEs wrong: `whats-running-mcp` and
 
 ## Known gaps at time of writing
 - **Glama has not crawled the repo yet** (badge 404). It crawls automatically; the three siblings' badges took time to appear too. The README badge will start rendering when it does.
-- **Smithery not submitted** (the siblings are 2 of 3 there); it needs a web login.
+- ~~**Smithery not submitted** (the siblings are 2 of 3 there); it needs a web login.~~ **CLOSED 2026-08-11 — published headless.** The "web-form only" premise went stale: Smithery CLI v1.2.0 grew `mcp publish <bundle> -n org/name`, and the box already held an authenticated token for the `shift-the-culture` namespace. Live at https://smithery.ai/server/shift-the-culture/whats-allowed-mcp showing all four tools (release d1116468-d5c0-4660-8fd3-8cae8f7b2e10; registry API `@shift-the-culture/whats-allowed-mcp` returns 200). Two publish traps documented for the next server: (1) the release API 400s ("No values to set") unless the bundle manifest declares `tools`; (2) it then 400s unless each tool also carries a full `inputSchema` — which the mcpb 0.2 spec REJECTS in manifest.json, so the repo manifest stays spec-clean (name+description only, commit 7744fa9) and the `inputSchema`s (taken verbatim from the server's own `tools/list`) are patched into the manifest inside the uploaded .mcpb only. Description/displayName are not part of the release payload: set via authenticated `PATCH https://api.smithery.ai/servers/shift-the-culture/whats-allowed-mcp` (needs a real User-Agent; default python UA gets Cloudflare 1010).
 - The three awesome-list PRs and the two directory issues are queued, not merged. That is normal and outside our control.
 
 ## Truth check
