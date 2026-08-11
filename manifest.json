@@ -15,6 +15,24 @@
   "support": "https://github.com/stcmain/whats-allowed-mcp/issues",
   "license": "MIT",
   "keywords": ["mcp", "claude-code", "permissions", "settings", "security", "audit", "guardrails"],
+  "tools": [
+    {
+      "name": "whats_allowed",
+      "description": "One-call summary of the permission configuration in force for a directory: which settings files contribute, allow/ask/deny counts per file, the winning defaultMode, blanket allows, hooks wired to tool use, and how many rules do not do what they look like they do"
+    },
+    {
+      "name": "permission_sources",
+      "description": "Every settings file that can contribute permission rules, in documented precedence order, with whether it exists, whether it parsed, how many rules it carries, and what a leading / in its path rules anchors to"
+    },
+    {
+      "name": "rule_findings",
+      "description": "Permission rules whose documented behaviour differs from their apparent intent: inert rules the client accepts and never consults, /path rules that anchor at the config directory, wildcards without a word boundary, allows on commands that run other commands, and allows a deny or ask rule reaches first"
+    },
+    {
+      "name": "unattended_surface",
+      "description": "The parts of the configuration that let a tool call go through without a human: the winning defaultMode, blanket allow rules, extra directories granted, whether bypass and auto modes are disabled, and hook commands"
+    }
+  ],
   "server": {
     "type": "node",
     "entry_point": "dist/index.js",
